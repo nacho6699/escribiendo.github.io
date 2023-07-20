@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-dos:#2a3344;
+    --color-tres:rgb(152, 155, 158);
+}
+@font-face {
+    font-family: 'MiRoboto';
+    src: url('roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    height: 100vh;
+    background:linear-gradient(180deg, #141e30, #182636);  /* Chrome 10-25, Safari 5.1-6 */ 
+    font-family: 'MiRoboto', 'roboto';
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    background-color: var(--color-dos);
+    box-shadow: 0px 1px 5px rgb(24, 24, 24);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header>nav{
+    width: 50%;
+    display: flex;
+   
+}
+header>nav>a{
+    color: aliceblue;
+    flex: auto;
+    text-align: center;
+    padding: 8px 0px;
+    border-right: 1px solid rgb(80, 83, 86);
+    text-decoration: none;
+    color: var(--color-tres);
+
+}
+header>nav>a:last-child{
+    border-right: none;
+}
+.active{
+    position: relative;
+}
+.active::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: aquamarine;
+    height: 2px;
+    width: 100%;
+}
+header>nav>a:hover{
+    background-color: #1d242f;
+}
+/*-----------------------------------------*/
+main{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+.section_texto{
+    /* background-color: yellow; */
+}
+.section__puntaje{
+    /* background-color: cyan; */
+}
+.section_keys{
+    /* background-color: purple; */
+}
+@media (max-width: 768px) {
+    main{
+        width: 98%;
+    }
+}
+footer{
+    background-color: var(--color-dos);
+    padding: 5px 0px;
+    color: var(--color-tres);
+    text-align: center;
+}
+.btn-primary{
+    background-color: aquamarine;
+    padding: 1px 5px;
+    margin: 3px 0px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color .3s;
+}
+.btn-primary:hover{
+    background-color: rgb(220, 240, 111);
+}
+
+#lecciones{
+    height: 30px;
+    width: 100px;
+}

@@ -1,0 +1,56 @@
+.section_texto{
+    margin-top: 1rem;
+    margin-bottom: 1em;
+}
+.letras{
+    color: rgb(199, 197, 197);
+    font-size: 2rem;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.span__letra{
+
+    border: 1px solid rgb(80, 79, 79);
+    min-width: 25px;
+    padding: 3px 0;
+    margin: 6px 3px ;
+    border-radius: 3px;
+    text-align: center;
+}
+/*===============================*/
+.correcto{
+    background-color: rgb(161, 244, 216);
+    color: rgb(46, 103, 84);   
+}
+.error{
+    background-color: rgb(233, 109, 121);
+    color: rgb(255, 255, 255);
+}
+/*para mi flechita*/
+.marcador{
+    position: relative;
+}
+.marcador::before{
+    position: absolute;
+    content: " ";
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(233, 246, 115);
+    left: 2.5px;
+    top: 50px;
+    animation: mover 1s infinite forwards ease-out;
+}
+@keyframes mover {
+    from{
+        top: 50px;
+    }
+    to{
+        top: 55px;
+    }
+}
+/*==============================*/
